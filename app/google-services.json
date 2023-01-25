@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "473846625425",
+    "project_id": "wamanahyahaa",
+    "storage_bucket": "wamanahyahaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473846625425:android:1f13572f2d6d671ff3fb30",
+        "android_client_info": {
+          "package_name": "com.example.wamanahyaha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473846625425-ua2jv30h3ni1froltbi48e0mau8nko45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRQO76-Te83qejKfO0cKu9Uu7gm8Fm3F4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473846625425-ua2jv30h3ni1froltbi48e0mau8nko45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
