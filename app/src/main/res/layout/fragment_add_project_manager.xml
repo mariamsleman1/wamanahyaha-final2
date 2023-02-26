@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_project_manager">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/nameofproject"
+            android:layout_width="235dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="40dp"
+            android:ems="10"
+            android:hint="name project"
+            android:inputType="textPersonName"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/detailsofproject"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgofproject" />
+
+        <EditText
+            android:id="@+id/detailsofproject"
+            android:layout_width="237dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="64dp"
+            android:ems="10"
+            android:hint="details about project"
+            android:inputType="textPersonName"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dateofprojects"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameofproject" />
+
+        <ImageButton
+            android:id="@+id/imgofproject"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="115dp"
+            app:layout_constraintBottom_toTopOf="@+id/nameofproject"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/dateofprojects"
+            android:layout_width="234dp"
+            android:layout_height="67dp"
+            android:layout_marginBottom="138dp"
+            android:ems="10"
+            android:hint="date of project"
+            android:inputType="date"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailsofproject" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
