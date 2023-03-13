@@ -27,14 +27,14 @@ public class manage_rallprojects_fragmaent extends Fragment {
     private String mParam2;
     private Button addproject;
 
-    public void allproject(){
-        addproject=getView().findViewById(R.id.addprojectsmanager);
+    public void allproject() {
+        addproject = getView().findViewById(R.id.addprojectsmanager);
         addproject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                add_project_manager add_project_manager=new add_project_manager();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.frameLayout,add_project_manager,add_project_manager.getTag()).commit();
+                add_project_manager add_project_manager = new add_project_manager();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.frameLayout, add_project_manager, add_project_manager.getTag()).commit();
             }
         });
 
@@ -77,5 +77,11 @@ public class manage_rallprojects_fragmaent extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_manage_rallprojects_fragmaent, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        allproject();
     }
 }

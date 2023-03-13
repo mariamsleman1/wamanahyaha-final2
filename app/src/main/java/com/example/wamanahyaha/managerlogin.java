@@ -26,7 +26,8 @@ public class managerlogin extends Fragment {
 
     // TODO: Rename and change types of parameters
     private String mParam1;
-    private String mParam2;private EditText email;
+    private String mParam2;
+    private EditText email;
     private EditText password;
     private String passwordmanager;
     private String emailmanager;
@@ -38,24 +39,24 @@ public class managerlogin extends Fragment {
         email = getView().findViewById(R.id.emaillogimnamger);
         password = getView().findViewById(R.id.passwordloginmanager);
        loginmanagerbtn=getView().findViewById(R.id.loginbtnmanager);
-        passwordmanager="12345678";
-        emailmanager="mariamsleman785@gmal.com";
+        passwordmanager="1234";
+        emailmanager="mari";
         etuemailmanager=email.getText().toString();
         etpasswordmanger=password.getText().toString();
         loginmanagerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(etuemailmanager==emailmanager && passwordmanager==etpasswordmanger){
+               // if(etuemailmanager==emailmanager && passwordmanager==etpasswordmanger){
                     //GO TO ADD PRODUCTS
                     manage_rallprojects_fragmaent manage_rallprojects_fragmaent=new manage_rallprojects_fragmaent();
                     FragmentManager manager=getFragmentManager();
                     manager.beginTransaction().replace(R.id.frameLayout,manage_rallprojects_fragmaent,manage_rallprojects_fragmaent.getTag()).commit();
-                }
+              //  }
 
-                else{
+              /*  else{
                     Toast.makeText(getContext(), "somthing failed", Toast.LENGTH_SHORT).show();
                     return;
-                }
+                }*/
             }
 
         });
