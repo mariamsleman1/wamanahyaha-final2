@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ofwhite"
+    android:backgroundTint="@color/ofwhite"
     tools:context=".add_project_manager">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,6 +23,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/detailsofproject"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgofproject" />
 
@@ -35,17 +38,19 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/dateofprojects"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameofproject" />
 
         <ImageButton
             android:id="@+id/imgofproject"
-            android:layout_width="200dp"
+            android:layout_width="210dp"
             android:layout_height="0dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginBottom="115dp"
-            app:layout_constraintBottom_toTopOf="@+id/nameofproject"
+            android:layout_marginTop="82dp"
+            android:layout_marginBottom="419dp"
+            app:layout_constraintBottom_toTopOf="@+id/adprojbtn"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
@@ -61,7 +66,23 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detailsofproject" />
+
+        <Button
+            android:id="@+id/adprojbtn"
+            android:layout_width="230dp"
+            android:layout_height="61dp"
+            android:layout_marginBottom="38dp"
+            android:backgroundTint="@color/babypink"
+            android:shadowColor="@color/babypink"
+            android:text="add project"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgofproject"
+            app:rippleColor="@color/babypink"
+            app:strokeColor="@color/babypink" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

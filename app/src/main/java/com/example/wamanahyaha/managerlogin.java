@@ -48,9 +48,9 @@ public class managerlogin extends Fragment {
             public void onClick(View v) {
                // if(etuemailmanager==emailmanager && passwordmanager==etpasswordmanger){
                     //GO TO ADD PRODUCTS
-                    manage_rallprojects_fragmaent manage_rallprojects_fragmaent=new manage_rallprojects_fragmaent();
+                    add_project_manager add_project_manager=new add_project_manager();
                     FragmentManager manager=getFragmentManager();
-                    manager.beginTransaction().replace(R.id.frameLayout,manage_rallprojects_fragmaent,manage_rallprojects_fragmaent.getTag()).commit();
+                    manager.beginTransaction().replace(R.id.frameLayout,add_project_manager,add_project_manager.getTag()).commit();
               //  }
 
               /*  else{

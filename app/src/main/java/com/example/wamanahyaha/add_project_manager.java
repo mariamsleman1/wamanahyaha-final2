@@ -9,12 +9,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import android.util.Log;
+import androidx.annotation.NonNull;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -38,7 +46,9 @@ public class add_project_manager extends Fragment {
     private EditText nameofproject;
     private EditText detailsofproject;
     private EditText dateofproject;
+    private Button addprojectbtn;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private CollectionReference requestsCollection;
 
     public void addproject(){
         String etnameofproject,etdetailsofproject,etdateofproject;
@@ -49,13 +59,21 @@ public class add_project_manager extends Fragment {
         etnameofproject=nameofproject.getText().toString();
         etdetailsofproject=detailsofproject.getText().toString();
         etdateofproject=dateofproject.getText().toString();
+        addprojectbtn=getView().findViewById(R.id.adprojbtn);
 
-        addprojectmanager project=new addprojectmanager(imageofprojuct,etnameofproject,etdetailsofproject,etdateofproject);
-        adddatetofirstore(project);
+
+        addprojectbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addprojectmanager project=new addprojectmanager(imageofprojuct,etnameofproject,etdetailsofproject,etdateofproject);
+                adddatetofirstore(project);
+            }
+        });
+
     }
     private void adddatetofirstore(addprojectmanager project) {
 
-try{
+/*try{
                     db.collection("projects")
                             .add(project).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
@@ -74,8 +92,25 @@ try{
                 catch (Exception ex){
 
             Log.e("",ex.getMessage());
+
         }
-            }
+
+ */
+        requestsCollection = FirebaseFirestore.getInstance().collection("projects");
+        requestsCollection.add(project)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(getContext(), "project added succesfull", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getContext(), "somthing failed", Toast.LENGTH_SHORT).show();
+                    }});
+    }
+
 
     public add_project_manager() {
         // Required empty public constructor
