@@ -8,6 +8,10 @@ public class addproject {
     private String projectname;
     private String projectdetails;
 
+    public addproject( String projectname, String projectdetails) {
+        this.projectname = projectname;
+        this.projectdetails = projectdetails;
+    }
 
     public addproject(ImageView projectimage, String projectname, String projectdetails) {
         this.projectimage = projectimage;

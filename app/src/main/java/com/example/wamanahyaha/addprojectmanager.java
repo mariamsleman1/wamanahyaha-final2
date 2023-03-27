@@ -46,4 +46,10 @@ public class addprojectmanager {
         this.projectdeatails = projectdeatails;
         this.dateofproject = dateofproject;
     }
+    public addprojectmanager( String projectname, String projectdeatails, String dateofproject) {
+
+        this.projectname = projectname;
+        this.projectdeatails = projectdeatails;
+        this.dateofproject = dateofproject;
+    }
 }

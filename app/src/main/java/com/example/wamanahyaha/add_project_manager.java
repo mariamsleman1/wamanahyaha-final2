@@ -65,15 +65,21 @@ public class add_project_manager extends Fragment {
         addprojectbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addprojectmanager project=new addprojectmanager(imageofprojuct,etnameofproject,etdetailsofproject,etdateofproject);
+                addprojectmanager project=new addprojectmanager(etnameofproject,etdetailsofproject,etdateofproject);
                 adddatetofirstore(project);
             }
         });
 
     }
     private void adddatetofirstore(addprojectmanager project) {
+        if(project.getDateofproject()==null &&project.getProjectdeatails()==null&&project.getProjectname()==null )
+        {
+            Toast.makeText(getContext(), "null!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-/*try{
+try{
+
                     db.collection("projects")
                             .add(project).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
@@ -95,8 +101,8 @@ public class add_project_manager extends Fragment {
 
         }
 
- */
-        requestsCollection = FirebaseFirestore.getInstance().collection("projects");
+
+      /*  requestsCollection = FirebaseFirestore.getInstance().collection("projects");
         requestsCollection.add(project)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -108,7 +114,7 @@ public class add_project_manager extends Fragment {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(getContext(), "somthing failed", Toast.LENGTH_SHORT).show();
-                    }});
+                    }});*/
     }
 
 
