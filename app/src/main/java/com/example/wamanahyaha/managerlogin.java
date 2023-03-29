@@ -35,34 +35,34 @@ public class managerlogin extends Fragment {
     private Button changepassword;
 
     public void loginstart(){
-        String etuemailmanager,etpasswordmanger;
+        String etuemailmanager,etpasswordmanger ,useremail="mariam@gmail.com",pass="11092005";
         email = getView().findViewById(R.id.emaillogimnamger);
         password = getView().findViewById(R.id.passwordloginmanager);
        loginmanagerbtn=getView().findViewById(R.id.loginbtnmanager);
-        passwordmanager="1234";
-        emailmanager="mari";
         etuemailmanager=email.getText().toString();
         etpasswordmanger=password.getText().toString();
+
+        loginmanagerclass user= new loginmanagerclass(etuemailmanager ,etpasswordmanger);
         loginmanagerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // if(etuemailmanager==emailmanager && passwordmanager==etpasswordmanger){
+                if(user.getUSEREMAIL()==useremail && user.getPASS()==pass){
                     //GO TO ADD PRODUCTS
                     add_project_manager add_project_manager=new add_project_manager();
                     FragmentManager manager=getFragmentManager();
                     manager.beginTransaction().replace(R.id.frameLayout,add_project_manager,add_project_manager.getTag()).commit();
-              //  }
+               }
 
-              /*  else{
+                else{
                     Toast.makeText(getContext(), "somthing failed", Toast.LENGTH_SHORT).show();
                     return;
-                }*/
+
             }
 
-        });
-       }
+        }
+       });
 
-
+    }
 
 
     public managerlogin() {

@@ -1,5 +1,6 @@
 package com.example.wamanahyaha;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -112,6 +113,9 @@ public class signupbenefactorfragment extends Fragment {
                 }
 
                 createUser();
+
+                Intent i=new Intent(getActivity(), privatedatabenefactotactivity.class);
+                startActivity(i);
 
             }
         });

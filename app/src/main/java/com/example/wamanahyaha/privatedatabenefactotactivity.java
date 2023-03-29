@@ -38,7 +38,7 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
         func();
     }
 
-    void imageChooser() {
+   public void imageChooser() {
         Intent intent=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent,3);
         onActivityResult(3,3,intent);
