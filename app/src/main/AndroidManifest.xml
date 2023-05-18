@@ -12,7 +12,13 @@
         android:theme="@style/Theme.Wamanahyaha"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".framelayoutActivitty"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/ofwhite"
     android:backgroundTint="@color/ofwhite"
-    tools:context=".add_project_manager">
+    tools:context=".fragments.add_project_manager">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -73,7 +73,7 @@
         <Button
             android:id="@+id/adprojbtn"
             android:layout_width="230dp"
-            android:layout_height="61dp"
+            android:layout_height="0dp"
             android:layout_marginBottom="38dp"
             android:backgroundTint="@color/babypink"
             android:shadowColor="@color/babypink"
@@ -81,8 +81,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgofproject"
             app:rippleColor="@color/babypink"
             app:strokeColor="@color/babypink" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

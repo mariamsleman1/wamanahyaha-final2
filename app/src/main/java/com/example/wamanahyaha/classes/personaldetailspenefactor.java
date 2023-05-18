@@ -1,4 +1,4 @@
-package com.example.wamanahyaha;
+package com.example.wamanahyaha.classes;
 
 import android.widget.ImageView;
 

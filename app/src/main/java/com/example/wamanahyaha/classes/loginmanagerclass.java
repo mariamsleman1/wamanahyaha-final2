@@ -1,4 +1,4 @@
-package com.example.wamanahyaha;
+package com.example.wamanahyaha.classes;
 
 public class loginmanagerclass {
     private String PASS;

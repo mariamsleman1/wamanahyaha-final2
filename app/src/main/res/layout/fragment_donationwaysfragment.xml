@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Donationwaysfragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/cashdanationbtn"
+            android:layout_width="187dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="106dp"
+            android:layout_marginBottom="113dp"
+            android:backgroundTint="@color/babypink"
+            android:text="cash - نقدي"
+            app:layout_constraintBottom_toTopOf="@+id/bitdonation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bitdonation"
+            android:layout_width="189dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="76dp"
+            android:backgroundTint="@color/babypink"
+            android:text="bit-העברה"
+            app:layout_constraintBottom_toTopOf="@+id/visadonation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cashdanationbtn" />
+
+        <Button
+            android:id="@+id/visadonation"
+            android:layout_width="196dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="218dp"
+            android:backgroundTint="@color/babypink"
+            android:text="visa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bitdonation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

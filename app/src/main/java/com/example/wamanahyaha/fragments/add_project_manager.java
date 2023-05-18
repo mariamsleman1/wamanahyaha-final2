@@ -1,9 +1,10 @@
-package com.example.wamanahyaha;
+package com.example.wamanahyaha.fragments;
 
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,19 +13,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wamanahyaha.R;
+import com.example.wamanahyaha.classes.addprojectmanager;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import android.util.Log;
-import androidx.annotation.NonNull;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 
 /**
@@ -47,6 +45,7 @@ public class add_project_manager extends Fragment {
     private EditText detailsofproject;
     private EditText dateofproject;
     private Button addprojectbtn;
+
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference requestsCollection;
 
@@ -100,6 +99,8 @@ try{
             Log.e("",ex.getMessage());
 
         }
+
+
 
 
       /*  requestsCollection = FirebaseFirestore.getInstance().collection("projects");

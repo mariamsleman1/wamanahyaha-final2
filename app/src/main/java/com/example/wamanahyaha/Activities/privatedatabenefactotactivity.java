@@ -1,8 +1,10 @@
-package com.example.wamanahyaha;
+package com.example.wamanahyaha.Activities;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Log;
 import androidx.annotation.NonNull;
+import com.example.wamanahyaha.R;
+import com.example.wamanahyaha.classes.personaldetailspenefactor;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +19,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.storage.FirebaseStorage;
 
 
 public class privatedatabenefactotactivity extends AppCompatActivity {
@@ -116,7 +117,12 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
 
                 Log.e("",ex.getMessage());
                 }
-        }
+
+
+                Intent intent = new Intent(privatedatabenefactotactivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+
+            }
     });
     }
     }

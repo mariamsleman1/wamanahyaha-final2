@@ -1,4 +1,4 @@
-package com.example.wamanahyaha;
+package com.example.wamanahyaha.fragments;
 
 import android.os.Bundle;
 
@@ -10,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.example.wamanahyaha.R;
+import com.example.wamanahyaha.classes.loginmanagerclass;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,6 +38,11 @@ public class managerlogin extends Fragment {
 
     public void loginstart(){
         String etuemailmanager,etpasswordmanger ,useremail="mariam@gmail.com",pass="11092005";
+        loginmanagerclass loginmanagerclass=new loginmanagerclass(useremail,pass);
+        loginmanagerclass.setPASS(pass);
+        loginmanagerclass.setUSEREMAIL(useremail);
+
+
         email = getView().findViewById(R.id.emaillogimnamger);
         password = getView().findViewById(R.id.passwordloginmanager);
        loginmanagerbtn=getView().findViewById(R.id.loginbtnmanager);
@@ -46,20 +53,20 @@ public class managerlogin extends Fragment {
         loginmanagerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(user.getUSEREMAIL()==useremail && user.getPASS()==pass){
+                //if(user.getUSEREMAIL()==useremail && user.getPASS()==pass){
                     //GO TO ADD PRODUCTS
                     add_project_manager add_project_manager=new add_project_manager();
                     FragmentManager manager=getFragmentManager();
                     manager.beginTransaction().replace(R.id.frameLayout,add_project_manager,add_project_manager.getTag()).commit();
                }
 
-                else{
+               /* else{
                     Toast.makeText(getContext(), "somthing failed", Toast.LENGTH_SHORT).show();
                     return;
 
             }
 
-        }
+        }*/
        });
 
     }

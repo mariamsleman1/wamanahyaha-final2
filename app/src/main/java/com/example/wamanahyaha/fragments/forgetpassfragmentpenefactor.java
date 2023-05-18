@@ -1,4 +1,4 @@
-package com.example.wamanahyaha;
+package com.example.wamanahyaha.fragments;
 
 import android.os.Bundle;
 
@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.wamanahyaha.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
