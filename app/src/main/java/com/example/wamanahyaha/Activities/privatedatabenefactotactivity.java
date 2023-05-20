@@ -24,7 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class privatedatabenefactotactivity extends AppCompatActivity {
     private EditText username;
     private EditText phonenumber;
-    private Spinner spinner;
+
     private ImageView imageView;
     private String onselctspinner;
     private Button adddata;
@@ -60,25 +60,12 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
         String usernamme, phonenum;
         username = findViewById(R.id.namebenefactor);
         phonenumber = findViewById(R.id.phonebenefactor);
-        spinner = findViewById(R.id.spinner);
+
         imageView = findViewById(R.id.perphoto);
         adddata = findViewById(R.id.finishbtn);
 
         usernamme = username.getText().toString();
         phonenum = phonenumber.getText().toString();
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String A = parent.getSelectedItem().toString();
-                onselctspinner = A;
-            }
-
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
 
 //
