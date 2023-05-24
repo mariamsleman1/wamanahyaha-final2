@@ -26,7 +26,7 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
     private EditText phonenumber;
 
     private ImageView imageView;
-    private String onselctspinner;
+
     private Button adddata;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -36,10 +36,10 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privatedatabenefactotactivity);
-        func();
+       // func();
     }
 
-   public void imageChooser() {
+  /* public void imageChooser() {
         Intent intent=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent,3);
         onActivityResult(3,3,intent);
@@ -67,6 +67,11 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
         usernamme = username.getText().toString();
         phonenum = phonenumber.getText().toString();
 
+        if ( usernamme.trim().isEmpty()&&phonenum.trim().isEmpty()){
+            Toast.makeText(this, "somthing failed!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
 //
        imageView.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +84,7 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    personaldetailspenefactor per = new personaldetailspenefactor(usernamme, phonenum, onselctspinner);
+                    personaldetailspenefactor per = new personaldetailspenefactor(usernamme, phonenum);
                     db.collection("users")
                             .add(per).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
@@ -111,6 +116,7 @@ public class privatedatabenefactotactivity extends AppCompatActivity {
 
             }
     });
-    }
-    }
+    }*/
+
+}
 

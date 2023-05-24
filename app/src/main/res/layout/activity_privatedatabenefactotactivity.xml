@@ -7,54 +7,5 @@
     android:background="@color/ofwhite"
     tools:context=".Activities.privatedatabenefactotactivity">
 
-    <Button
-        android:id="@+id/finishbtn"
-        android:layout_width="126dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginBottom="120dp"
-        android:backgroundTint="@color/babypink"
-        android:text="FINISH"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/namebenefactor"
-        android:layout_width="237dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="456dp"
-        android:ems="10"
-        android:hint="name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/phonebenefactor"
-        app:layout_constraintTop_toBottomOf="@+id/perphoto" />
-
-    <EditText
-        android:id="@+id/phonebenefactor"
-        android:layout_width="251dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:hint="phone number"
-        android:inputType="phone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namebenefactor" />
-
-
-
-    <ImageView
-        android:id="@+id/perphoto"
-        android:layout_width="143dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/namebenefactor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/perphoto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

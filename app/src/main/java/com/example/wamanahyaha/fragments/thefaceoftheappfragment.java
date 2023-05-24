@@ -50,9 +50,12 @@ etbenefactorbtn.setOnClickListener(new View.OnClickListener() {
 etmangerbtn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        managerlogin managerlogin=new managerlogin();
+       /* managerlogin managerlogin=new managerlogin();
         FragmentManager manager=getFragmentManager();
-        manager.beginTransaction().replace(R.id.frameLayout,managerlogin,managerlogin.getTag()).commit();
+        manager.beginTransaction().replace(R.id.frameLayout,managerlogin,managerlogin.getTag()).commit();*/
+        add_project_manager add_project_manager=new add_project_manager();
+        FragmentManager manager=getFragmentManager();
+        manager.beginTransaction().replace(R.id.frameLayout,add_project_manager,add_project_manager.getTag()).commit();
     }
 });
     }

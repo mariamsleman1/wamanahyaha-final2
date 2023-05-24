@@ -45,43 +45,48 @@ public class signupbenefactorfragment extends Fragment {
     private Button loginbtn;
 
     public void createUser(){
-        try{
-            etpassword=getView().findViewById(R.id.passsignup);
-            etconfirmpassword=getView().findViewById(R.id.confirmpasssignup);
-            etemail=getView().findViewById(R.id.emailsignupbenefactor);
-            btnsignup=getView().findViewById(R.id.finishsignup);
-            mAuth=FirebaseAuth.getInstance();
+            try{
+                etpassword=getView().findViewById(R.id.passsignup);
+                etconfirmpassword=getView().findViewById(R.id.confirmpasssignup);
+                etemail=getView().findViewById(R.id.emailsignupbenefactor);
+                btnsignup=getView().findViewById(R.id.finishsignup);
+                mAuth=FirebaseAuth.getInstance();
 
-            if(!etemail.getText().toString().isEmpty()&&!etpassword.getText().toString().isEmpty()&&!etconfirmpassword.getText().toString().isEmpty()){
-                if(etpassword.getText().toString().equals(etconfirmpassword.getText().toString())){
-                    mAuth.createUserWithEmailAndPassword(etemail.getText().toString(),etpassword.getText().toString())
-                            .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                                @Override
-                                public void onSuccess(AuthResult authResult) {
-                                    Toast.makeText(getContext(), "Account created.", Toast.LENGTH_SHORT).show();
-                                    if(mAuth.getCurrentUser()!=null){
-                                        mAuth.signOut();
+                if(!etemail.getText().toString().isEmpty()&&!etpassword.getText().toString().isEmpty()&&!etconfirmpassword.getText().toString().isEmpty()){
+                    if(etpassword.getText().toString().equals(etconfirmpassword.getText().toString())){
+                        mAuth.createUserWithEmailAndPassword(etemail.getText().toString(),etpassword.getText().toString())
+                                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                    @Override
+                                    public void onSuccess(AuthResult authResult) {
+                                        Toast.makeText(getContext(), "Account created.", Toast.LENGTH_SHORT).show();
+                                        if(mAuth.getCurrentUser()!=null){
+                                            mAuth.signOut();
+
+                                            privatedetailsfragment privatedetailsfragment=new privatedetailsfragment();
+                                            FragmentManager manager=getFragmentManager();
+                                            manager.beginTransaction().replace(R.id.frameLayout,privatedetailsfragment,privatedetailsfragment.getTag()).commit();
+                                        }
                                     }
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(getContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                    else{
+                        Toast.makeText(getContext(), "Passwords do not match.", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 else{
-                    Toast.makeText(getContext(), "Passwords do not match.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Missing fields identified.", Toast.LENGTH_SHORT).show();
                 }
             }
-            else{
-                Toast.makeText(getContext(), "Missing fields identified.", Toast.LENGTH_SHORT).show();
-            }
-        }
-        catch (Exception e){
-            Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
-        }}
+            catch (Exception e){
+                Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
+            }}
+
 
 
     private  void instalize(){
@@ -116,8 +121,11 @@ public class signupbenefactorfragment extends Fragment {
 
                 createUser();
 
-                Intent i=new Intent(getActivity(), privatedatabenefactotactivity.class);
-                startActivity(i);
+
+
+               /* privatedetailsfragment privatedetailsfragment=new privatedetailsfragment();
+                FragmentManager manager=getFragmentManager();
+                manager.beginTransaction().replace(R.id.frameLayout,privatedetailsfragment,privatedetailsfragment.getTag()).commit();*/
 
             }
         });

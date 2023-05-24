@@ -29,6 +29,7 @@
         <EditText
             android:id="@+id/emaillogimnamger"
             android:layout_width="234dp"
+            android:textColor="@color/black"
             android:layout_height="52dp"
             android:layout_marginBottom="76dp"
             android:ems="10"
@@ -43,6 +44,7 @@
         <EditText
             android:id="@+id/passwordloginmanager"
             android:layout_width="232dp"
+            android:textColor="@color/black"
             android:layout_height="57dp"
             android:layout_marginStart="100dp"
             android:layout_marginBottom="244dp"

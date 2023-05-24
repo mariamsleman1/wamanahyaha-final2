@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.privatedetailsfragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/finishbtnn"
+            android:layout_width="232dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginEnd="112dp"
+            android:layout_marginBottom="96dp"
+            android:backgroundTint="@color/babypink"
+            android:text="FINISH"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phonebenefactorr" />
+
+        <EditText
+            android:id="@+id/namebenefactorr"
+            android:layout_width="256dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="107dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="172dp"
+            android:ems="10"
+            android:hint="name"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/phonebenefactorr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.647"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/phonebenefactorr"
+            android:layout_width="247dp"
+            android:textColor="@color/black"
+            android:layout_height="88dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="82dp"
+            android:layout_marginBottom="291dp"
+            android:ems="10"
+            android:hint="phone number"
+            android:inputType="phone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namebenefactorr" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

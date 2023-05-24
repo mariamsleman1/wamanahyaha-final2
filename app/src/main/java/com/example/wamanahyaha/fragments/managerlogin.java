@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.wamanahyaha.R;
 import com.example.wamanahyaha.classes.loginmanagerclass;
@@ -36,8 +37,8 @@ public class managerlogin extends Fragment {
     private Button loginmanagerbtn;
     private Button changepassword;
 
-    public void loginstart(){
-        String etuemailmanager,etpasswordmanger ,useremail="mariam@gmail.com",pass="11092005";
+  /*  public void loginstart(){
+        String etuemailmanager,etpasswordmanger ,useremail="m",pass="11092005";
         loginmanagerclass loginmanagerclass=new loginmanagerclass(useremail,pass);
         loginmanagerclass.setPASS(pass);
         loginmanagerclass.setUSEREMAIL(useremail);
@@ -48,25 +49,24 @@ public class managerlogin extends Fragment {
        loginmanagerbtn=getView().findViewById(R.id.loginbtnmanager);
         etuemailmanager=email.getText().toString();
         etpasswordmanger=password.getText().toString();
-
-        loginmanagerclass user= new loginmanagerclass(etuemailmanager ,etpasswordmanger);
         loginmanagerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //if(user.getUSEREMAIL()==useremail && user.getPASS()==pass){
+                if(etuemailmanager==useremail )
+                    Toast.makeText(getContext(), "yes", Toast.LENGTH_SHORT).show();
+                    if( etpasswordmanger==pass)
+                        Toast.makeText(, "", Toast.LENGTH_SHORT).show();
                     //GO TO ADD PRODUCTS
-                    add_project_manager add_project_manager=new add_project_manager();
-                    FragmentManager manager=getFragmentManager();
-                    manager.beginTransaction().replace(R.id.frameLayout,add_project_manager,add_project_manager.getTag()).commit();
+
                }
 
-               /* else{
-                    Toast.makeText(getContext(), "somthing failed", Toast.LENGTH_SHORT).show();
+                else{
+                    Toast.makeText(getContext(), "failed", Toast.LENGTH_SHORT).show();
                     return;
 
             }
 
-        }*/
+        }
        });
 
     }
@@ -113,6 +113,6 @@ public class managerlogin extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        loginstart();
+       // loginstart();
     }
 }

@@ -3,18 +3,13 @@ package com.example.wamanahyaha.classes;
 import android.widget.ImageView;
 
 public class addprojectmanager {
-    private ImageView addprojectimage;
+
     private String projectname;
     private String projectdeatails;
     private String dateofproject;
 
-    public ImageView getAddprojectimage() {
-        return addprojectimage;
-    }
 
-    public void setAddprojectimage(ImageView addprojectimage) {
-        this.addprojectimage = addprojectimage;
-    }
+
 
     public String getProjectname() {
         return projectname;
@@ -40,16 +35,10 @@ public class addprojectmanager {
         this.dateofproject = dateofproject;
     }
 
-    public addprojectmanager(ImageView addprojectimage, String projectname, String projectdeatails, String dateofproject) {
-        this.addprojectimage = addprojectimage;
+    public addprojectmanager(String projectname, String projectdeatails, String dateofproject) {
         this.projectname = projectname;
         this.projectdeatails = projectdeatails;
         this.dateofproject = dateofproject;
     }
-    public addprojectmanager( String projectname, String projectdeatails, String dateofproject) {
 
-        this.projectname = projectname;
-        this.projectdeatails = projectdeatails;
-        this.dateofproject = dateofproject;
-    }
 }

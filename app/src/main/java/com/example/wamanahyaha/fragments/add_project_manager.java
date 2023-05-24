@@ -61,21 +61,22 @@ public class add_project_manager extends Fragment {
         addprojectbtn=getView().findViewById(R.id.adprojbtn);
 
 
+
+
         addprojectbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addprojectmanager project=new addprojectmanager(etnameofproject,etdetailsofproject,etdateofproject);
-                adddatetofirstore(project);
-            }
+                if(etnameofproject.trim().isEmpty()&&etdetailsofproject.trim().isEmpty()&&etdateofproject.trim().isEmpty()) {
+                    Toast.makeText(getContext(), "empty! try again!", Toast.LENGTH_SHORT).show();
+                    return;}
+                else {
+                    addprojectmanager project = new addprojectmanager(etnameofproject, etdetailsofproject, etdateofproject);
+                    adddatetofirstore(project);
+                } }
         });
 
     }
     private void adddatetofirstore(addprojectmanager project) {
-        if(project.getDateofproject()==null &&project.getProjectdeatails()==null&&project.getProjectname()==null )
-        {
-            Toast.makeText(getContext(), "null!", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
 try{
 
