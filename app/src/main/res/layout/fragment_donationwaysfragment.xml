@@ -13,40 +13,39 @@
 
         <Button
             android:id="@+id/cashdanationbtn"
-            android:layout_width="187dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="106dp"
-            android:layout_marginBottom="113dp"
+            android:layout_width="233dp"
+            android:layout_height="135dp"
+            android:layout_marginStart="88dp"
             android:backgroundTint="@color/babypink"
             android:text="cash - نقدي"
-            app:layout_constraintBottom_toTopOf="@+id/bitdonation"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:layout_editor_absoluteY="156dp" />
 
         <Button
             android:id="@+id/bitdonation"
-            android:layout_width="189dp"
-            android:layout_height="0dp"
+            android:layout_width="220dp"
+            android:layout_height="93dp"
             android:layout_marginBottom="76dp"
             android:backgroundTint="@color/babypink"
             android:text="bit-העברה"
             app:layout_constraintBottom_toTopOf="@+id/visadonation"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cashdanationbtn" />
+            app:layout_constraintTop_toBottomOf="@+id/cashdanationbtn"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/visadonation"
-            android:layout_width="196dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="218dp"
+            android:layout_width="238dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="56dp"
             android:backgroundTint="@color/babypink"
             android:text="visa"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bitdonation" />
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

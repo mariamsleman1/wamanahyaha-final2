@@ -13,7 +13,8 @@
 
 
         <Button
-            android:id="@+id/finishbtnn"
+            android:id="@+id/donationpaypal"
+            android:onClick="doanujj"
             android:layout_width="232dp"
             android:layout_height="77dp"
             android:layout_marginStart="108dp"

@@ -13,85 +13,55 @@
         android:layout_height="match_parent"
         android:backgroundTint="@color/ofwhite">
 
-        <Button
-            android:id="@+id/donatevisabtn"
-            android:layout_width="218dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="96dp"
-            android:layout_marginBottom="54dp"
-            android:backgroundTint="@color/babypink"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mablag" />
-
-        <EditText
-            android:id="@+id/visanumber"
-            android:layout_width="217dp"
-            android:layout_height="58dp"
-            android:layout_marginTop="114dp"
-            android:layout_marginBottom="89dp"
-            android:ems="10"
-            android:hint="visa tall num"
-            android:inputType="numberPassword"
-            app:layout_constraintBottom_toTopOf="@+id/visaidnum"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.469"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/visaidnum"
-            android:layout_width="218dp"
-            android:layout_height="52dp"
-            android:layout_marginBottom="50dp"
-            android:ems="10"
-            android:hint="id  visa owner"
-            android:inputType="numberPassword"
-            app:layout_constraintBottom_toTopOf="@+id/datevisa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/visanumber" />
-
-        <EditText
-            android:id="@+id/datevisa"
-            android:layout_width="222dp"
-            android:layout_height="57dp"
-            android:layout_marginBottom="30dp"
-            android:ems="10"
-            android:inputType="date"
-            app:layout_constraintBottom_toTopOf="@+id/cvvvosa"
-            app:layout_constraintStart_toStartOf="@+id/visaidnum"
-            app:layout_constraintTop_toBottomOf="@+id/visaidnum"
-            tools:text="@tools:sample/date/mmddyy" />
-
-        <EditText
-            android:id="@+id/cvvvosa"
-            android:layout_width="221dp"
-            android:layout_height="57dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="90dp"
-            android:ems="10"
-            android:hint="cvv"
-            android:inputType="numberPassword"
-            app:layout_constraintBottom_toTopOf="@+id/donatevisabtn"
-            app:layout_constraintEnd_toEndOf="@+id/mablag"
-            app:layout_constraintTop_toBottomOf="@+id/datevisa" />
-
         <EditText
             android:id="@+id/mablag"
-            android:layout_width="217dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="552dp"
-            android:layout_marginBottom="22dp"
+            android:layout_width="273dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="168dp"
             android:ems="10"
             android:hint="how   much"
             android:inputType="numberPassword"
-            app:layout_constraintBottom_toTopOf="@+id/donatevisabtn"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/usernamepaypal"
+            android:layout_width="263dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="332dp"
+            android:ems="10"
+            android:hint="username paypal"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/passwordpaypal"
+            android:layout_width="274dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="76dp"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/dopaypal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/dopaypal"
+            android:layout_width="240dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginBottom="66dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mablag"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

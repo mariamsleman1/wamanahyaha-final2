@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,38 +29,34 @@ public class VISAdonationfragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private EditText visatallnum;
-    private EditText date;
-    private EditText visatcvv;
-    private EditText idownervisa;
+    private EditText username;
     private EditText howmuch;
+    private Button dodo;
 
     public void func(){
-        String etvisanum,etvisaownerid,etvisacvv,etvisadate,etmablag;
-        visatallnum=getView().findViewById(R.id.visanumber);
-        date=getView().findViewById(R.id.datevisa);
-        visatcvv=getView().findViewById(R.id.cvvvosa);
-        idownervisa=getView().findViewById(R.id.visaidnum);
+        String etusername,etmablag;
+        dodo=getView().findViewById(R.id.dopaypal);
         howmuch=getView().findViewById(R.id.mablag);
+        username=getView().findViewById(R.id.usernamepaypal);
+        etusername=username.getText().toString();
         etmablag=howmuch.getText().toString();
-        etvisacvv=visatcvv.getText().toString();
-        etvisanum=visatallnum.getText().toString();
-        etvisadate=visatcvv.getText().toString();
-        etvisaownerid=date.getText().toString();
 
-if( etvisacvv==null&&date==null&&visatcvv==null&&idownervisa==null&&etmablag==null){
-    Toast.makeText(getContext(), "somthing null !!", Toast.LENGTH_SHORT).show();
-}
-else{
-    Toast.makeText(getContext(), "donate succes!", Toast.LENGTH_SHORT).show();
-        Toast.makeText(getContext(), " thank you so much!", Toast.LENGTH_SHORT).show();}
-
-
-
+        dodo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(etmablag.trim().isEmpty()&&etusername.trim().isEmpty()){
+                    Toast.makeText(getContext(), "somthing null !!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else {
+                    Toast.makeText(getContext(), "donate succes!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), " thank you so much!", Toast.LENGTH_SHORT).show();}
+            }
+        });
 
 
 
     }
-
 
 
 

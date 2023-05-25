@@ -81,6 +81,14 @@ public class loginbenefactorfragment extends Fragment {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(getContext(), "User signed in successfully.", Toast.LENGTH_SHORT).show();
+                      /*  RecylerViewFragment RecylerViewFragment=new RecylerViewFragment();
+                        FragmentManager manager=getFragmentManager();
+                        manager.beginTransaction().replace(R.id.frameLayout,RecylerViewFragment,RecylerViewFragment.getTag()).commit();*/
+                        Donationwaysfragment Donationwaysfragment=new Donationwaysfragment();
+                        FragmentManager manager=getFragmentManager();
+                        manager.beginTransaction().replace(R.id.frameLayout,Donationwaysfragment,Donationwaysfragment.getTag()).commit();
+
+
                        //go to personal page
                     }
                 }).addOnFailureListener(new OnFailureListener() {

@@ -1,26 +1,18 @@
 package com.example.wamanahyaha.fragments;
 
-import static android.app.Activity.RESULT_OK;
-
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.wamanahyaha.Activities.RecyclerViewActivity;
-import com.example.wamanahyaha.Activities.privatedatabenefactotactivity;
 import com.example.wamanahyaha.R;
 import com.example.wamanahyaha.classes.personaldetailspenefactor;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -55,7 +47,7 @@ public class privatedetailsfragment extends Fragment {
         String usernamme, phonenum;
         etusername = getView().findViewById(R.id.namebenefactorr);
         etphonenumber = getView().findViewById(R.id.phonebenefactorr);
-        adddata = getView().findViewById(R.id.finishbtnn);
+        adddata = getView().findViewById(R.id.donationpaypal);
         usernamme = etusername.getText().toString();
         phonenum = etphonenumber.getText().toString();
 
@@ -147,6 +139,8 @@ public class privatedetailsfragment extends Fragment {
 
         //gotorecycler();
     }
+
+
 
    /* private void gotorecycler() {
         Intent i = new Intent(getActivity(), RecyclerViewActivity.class);
