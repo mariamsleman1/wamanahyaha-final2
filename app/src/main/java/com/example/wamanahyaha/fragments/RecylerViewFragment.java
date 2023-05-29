@@ -45,14 +45,7 @@ public class RecylerViewFragment extends Fragment {
    private FirebaseFirestore DB=FirebaseFirestore.getInstance();
    private Button donate ;
 private callBack  Callback;
-
-
-
-
-
-
-
-
+private Button previous;
 
     public RecylerViewFragment() {
         // Required empty public constructor
@@ -98,22 +91,22 @@ private callBack  Callback;
     @Override
     public void onStart() {
         super.onStart();
-        recyclerView=getView().findViewById(R.id.recyclerView);
-        donate =getView().findViewById(R.id.donate);
+        recyclerView = getView().findViewById(R.id.recyclerView);
+        donate = getView().findViewById(R.id.donate);
         donate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Donationwaysfragment Donationwaysfragment=new Donationwaysfragment();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.frameLayout,Donationwaysfragment,Donationwaysfragment.getTag()).commit();
+                Donationwaysfragment Donationwaysfragment = new Donationwaysfragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.frameLayout, Donationwaysfragment, Donationwaysfragment.getTag()).commit();
             }
         });
-       // Callback = list->connect();
+        // Callback = list->connect();
         DB.collection("projects")
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        for (QueryDocumentSnapshot document : task.getResult()){
+                        for (QueryDocumentSnapshot document : task.getResult()) {
                             list.add(document.toObject(projectdatA.class));
                         }
                     }
@@ -122,7 +115,6 @@ private callBack  Callback;
                 }).addOnFailureListener(e -> {
                     Toast.makeText(getContext(), "no data || something wrong ", Toast.LENGTH_SHORT).show();
                 });
-
 
     }
 

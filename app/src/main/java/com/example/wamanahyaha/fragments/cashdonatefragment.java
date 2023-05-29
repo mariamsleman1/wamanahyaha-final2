@@ -3,10 +3,12 @@ package com.example.wamanahyaha.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.wamanahyaha.R;
 
@@ -25,6 +27,9 @@ public class cashdonatefragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
+
 
     public cashdonatefragment() {
         // Required empty public constructor
@@ -63,4 +68,6 @@ public class cashdonatefragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cashdonatefragment, container, false);
     }
+
+
 }

@@ -3,6 +3,7 @@ package com.example.wamanahyaha.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,8 +33,10 @@ public class VISAdonationfragment extends Fragment {
     private EditText username;
     private EditText howmuch;
     private Button dodo;
+    private Button previous;
 
     public void func(){
+
 
         dodo=getView().findViewById(R.id.dopaypal);
         howmuch=getView().findViewById(R.id.mablag);

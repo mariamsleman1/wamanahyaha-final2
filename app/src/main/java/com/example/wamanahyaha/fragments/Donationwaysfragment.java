@@ -30,10 +30,13 @@ public class Donationwaysfragment extends Fragment {
     private Button cashbtn;
     private Button bitbtn;
     private Button visabtn;
+    private Button previous;
     public void func(){
         cashbtn=getView().findViewById(R.id.cashdanationbtn);
         bitbtn=getView().findViewById(R.id.bitdonation);
         visabtn=getView().findViewById(R.id.visadonation);
+
+
 
         cashbtn.setOnClickListener(new View.OnClickListener() {
             @Override

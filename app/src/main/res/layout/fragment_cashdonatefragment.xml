@@ -11,19 +11,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="278dp"
-            android:layout_height="86dp"
-            android:layout_marginBottom="164dp"
-            android:text="بالامكان التبرع داخل مقر الجمعيه او التواصل على رقم الهاتف الاتي ليصلك اقرب مندوب الى بلدك"
-            android:textColor="@color/babypink"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.547"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
             android:id="@+id/textView5"
             android:layout_width="221dp"
             android:layout_height="114dp"
@@ -32,8 +19,6 @@
             android:textColor="@color/babypink"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView4" />
 
         <TextView
@@ -51,18 +36,16 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="187dp"
+            android:layout_width="0dp"
             android:layout_height="61dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginEnd="80dp"
             android:layout_marginBottom="68dp"
             android:text="نتشرف بكم "
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/babypink"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

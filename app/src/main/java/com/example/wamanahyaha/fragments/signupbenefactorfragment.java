@@ -1,5 +1,6 @@
 package com.example.wamanahyaha.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -63,6 +64,8 @@ public class signupbenefactorfragment extends Fragment {
                                             privatedetailsfragment privatedetailsfragment=new privatedetailsfragment();
                                             FragmentManager manager=getFragmentManager();
                                             manager.beginTransaction().replace(R.id.frameLayout,privatedetailsfragment,privatedetailsfragment.getTag()).commit();
+
+
                                         }
                                     }
                                 })

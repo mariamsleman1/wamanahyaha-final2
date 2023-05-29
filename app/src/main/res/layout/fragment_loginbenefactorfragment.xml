@@ -15,12 +15,12 @@
             android:id="@+id/Emailtextlogin"
             android:layout_width="215dp"
             android:layout_height="55dp"
-            android:layout_marginTop="204dp"
+            android:layout_marginTop="156dp"
             android:ems="10"
             android:hint="E-mail"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintHorizontal_bias="0.53"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +28,7 @@
             android:id="@+id/passwordlogin"
             android:layout_width="214dp"
             android:layout_height="54dp"
-            android:layout_marginTop="312dp"
+            android:layout_marginTop="272dp"
             android:ems="10"
             android:hint="password"
             android:inputType="numberPassword"
