@@ -27,7 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/perphoto"
             app:layout_constraintVertical_bias="1.0" />
 
         <EditText
@@ -67,7 +67,7 @@
             app:layout_constraintTop_toBottomOf="@+id/namebenefactorr" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/perphoto"
             android:layout_width="216dp"
             android:layout_height="166dp"
             android:layout_marginTop="17dp"

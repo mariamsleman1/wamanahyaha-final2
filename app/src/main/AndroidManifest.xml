@@ -12,9 +12,6 @@
         android:theme="@style/Theme.Wamanahyaha"
         tools:targetApi="31">
         <activity
-            android:name=".framelayoutActivity"
-            android:exported="false" />
-        <activity
             android:name=".VisadonationActivity"
             android:exported="false" />
         <activity
