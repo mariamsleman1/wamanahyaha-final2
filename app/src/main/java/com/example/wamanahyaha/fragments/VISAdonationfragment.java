@@ -34,16 +34,18 @@ public class VISAdonationfragment extends Fragment {
     private Button dodo;
 
     public void func(){
-        String etusername,etmablag;
+
         dodo=getView().findViewById(R.id.dopaypal);
         howmuch=getView().findViewById(R.id.mablag);
         username=getView().findViewById(R.id.usernamepaypal);
-        etusername=username.getText().toString();
-        etmablag=howmuch.getText().toString();
+
 
         dodo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String etusername,etmablag;
+                etusername=username.getText().toString();
+                etmablag=howmuch.getText().toString();
                 if(etmablag.trim().isEmpty()&&etusername.trim().isEmpty()){
                     Toast.makeText(getContext(), "somthing null !!", Toast.LENGTH_SHORT).show();
                     return;

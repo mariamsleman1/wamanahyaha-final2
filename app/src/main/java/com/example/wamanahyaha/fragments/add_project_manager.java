@@ -50,14 +50,12 @@ public class add_project_manager extends Fragment {
     private CollectionReference requestsCollection;
 
     public void addproject(){
-        String etnameofproject,etdetailsofproject,etdateofproject;
+
         imageofprojuct=getView().findViewById(R.id.imgofproject);
         nameofproject=getView().findViewById(R.id.nameofproject);
         detailsofproject=getView().findViewById(R.id.detailsofproject);
         dateofproject=getView().findViewById(R.id.dateofprojects);
-        etnameofproject=nameofproject.getText().toString();
-        etdetailsofproject=detailsofproject.getText().toString();
-        etdateofproject=dateofproject.getText().toString();
+
         addprojectbtn=getView().findViewById(R.id.adprojbtn);
 
 
@@ -66,6 +64,10 @@ public class add_project_manager extends Fragment {
         addprojectbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String etnameofproject,etdetailsofproject,etdateofproject;
+                etnameofproject=nameofproject.getText().toString();
+                etdetailsofproject=detailsofproject.getText().toString();
+                etdateofproject=dateofproject.getText().toString();
                 if(etnameofproject.trim().isEmpty()&&etdetailsofproject.trim().isEmpty()&&etdateofproject.trim().isEmpty()) {
                     Toast.makeText(getContext(), "empty! try again!", Toast.LENGTH_SHORT).show();
                     return;}
@@ -85,7 +87,7 @@ try{
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {
                                     Toast.makeText(getContext(), "DATA SAVED", Toast.LENGTH_SHORT).show();
-                                    //go to projects
+
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override

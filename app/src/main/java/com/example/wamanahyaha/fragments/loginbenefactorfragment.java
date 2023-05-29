@@ -84,12 +84,9 @@ public class loginbenefactorfragment extends Fragment {
                       /*  RecylerViewFragment RecylerViewFragment=new RecylerViewFragment();
                         FragmentManager manager=getFragmentManager();
                         manager.beginTransaction().replace(R.id.frameLayout,RecylerViewFragment,RecylerViewFragment.getTag()).commit();*/
-                        Donationwaysfragment Donationwaysfragment=new Donationwaysfragment();
+                        RecylerViewFragment RecylerViewFragment=new RecylerViewFragment();
                         FragmentManager manager=getFragmentManager();
-                        manager.beginTransaction().replace(R.id.frameLayout,Donationwaysfragment,Donationwaysfragment.getTag()).commit();
-
-
-                       //go to personal page
+                        manager.beginTransaction().replace(R.id.frameLayout,RecylerViewFragment,RecylerViewFragment.getTag()).commit();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -44,18 +45,21 @@ public class privatedetailsfragment extends Fragment {
 
 
     public void func() {
-        String usernamme, phonenum;
+
         etusername = getView().findViewById(R.id.namebenefactorr);
         etphonenumber = getView().findViewById(R.id.phonebenefactorr);
         adddata = getView().findViewById(R.id.donationpaypal);
-        usernamme = etusername.getText().toString();
-        phonenum = etphonenumber.getText().toString();
+
 
 
 
         adddata.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                String usernamme, phonenum;
+                usernamme = etusername.getText().toString();
+                phonenum = etphonenumber.getText().toString();
                 if (usernamme.trim().isEmpty()&&phonenum.trim().isEmpty()){
                     Toast.makeText(getContext(), "empty!", Toast.LENGTH_SHORT).show();
                     return;
@@ -68,7 +72,9 @@ public class privatedetailsfragment extends Fragment {
                                 public void onSuccess(DocumentReference documentReference) {
                                     Toast.makeText(getContext(), "data was saved", Toast.LENGTH_SHORT).show();
 
-                                    //go to projects
+                                    RecylerViewFragment RecylerViewFragment=new RecylerViewFragment();
+                                    FragmentManager manager=getFragmentManager();
+                                    manager.beginTransaction().replace(R.id.frameLayout,RecylerViewFragment,RecylerViewFragment.getTag()).commit();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override

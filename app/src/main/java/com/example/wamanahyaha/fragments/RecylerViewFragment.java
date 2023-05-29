@@ -1,8 +1,9 @@
-package com.example.wamanahyaha;
+package com.example.wamanahyaha.fragments;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.wamanahyaha.R;
 import com.example.wamanahyaha.classes.MyAdapter;
 import com.example.wamanahyaha.classes.callBack;
 import com.example.wamanahyaha.classes.projectdatA;
@@ -39,7 +41,7 @@ public class RecylerViewFragment extends Fragment {
      private RecyclerView recyclerView;
    private DatabaseReference databaseReference;
     private   MyAdapter myAdapter;
-   private ArrayList<projectdatA> list;
+   private ArrayList<projectdatA> list=new ArrayList<>();
    private FirebaseFirestore DB=FirebaseFirestore.getInstance();
    private Button donate ;
 private callBack  Callback;
@@ -101,11 +103,13 @@ private callBack  Callback;
         donate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //////
+                Donationwaysfragment Donationwaysfragment=new Donationwaysfragment();
+                FragmentManager manager=getFragmentManager();
+                manager.beginTransaction().replace(R.id.frameLayout,Donationwaysfragment,Donationwaysfragment.getTag()).commit();
             }
         });
-        Callback = list->connect();
-        DB.collection("project")
+       // Callback = list->connect();
+        DB.collection("projects")
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -113,7 +117,8 @@ private callBack  Callback;
                             list.add(document.toObject(projectdatA.class));
                         }
                     }
-                    Callback.onCallBack(list);
+                    //Callback.onCallBack(list);
+                    connect();
                 }).addOnFailureListener(e -> {
                     Toast.makeText(getContext(), "no data || something wrong ", Toast.LENGTH_SHORT).show();
                 });
