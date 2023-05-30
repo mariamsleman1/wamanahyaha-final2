@@ -1,5 +1,7 @@
 package com.example.wamanahyaha.fragments;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wamanahyaha.R;
+import com.example.wamanahyaha.classes.PersonalpageActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -84,9 +87,9 @@ public class loginbenefactorfragment extends Fragment {
                       /*  RecylerViewFragment RecylerViewFragment=new RecylerViewFragment();
                         FragmentManager manager=getFragmentManager();
                         manager.beginTransaction().replace(R.id.frameLayout,RecylerViewFragment,RecylerViewFragment.getTag()).commit();*/
-                        RecylerViewFragment RecylerViewFragment=new RecylerViewFragment();
-                        FragmentManager manager=getFragmentManager();
-                        manager.beginTransaction().replace(R.id.frameLayout,RecylerViewFragment,RecylerViewFragment.getTag()).commit();
+                        Intent i = new Intent(getActivity(), PersonalpageActivity.class);
+                        startActivity(i);
+                        ((Activity) getActivity()).overridePendingTransition(0, 0);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

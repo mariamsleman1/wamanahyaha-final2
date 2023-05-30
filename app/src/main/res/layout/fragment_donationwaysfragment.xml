@@ -9,16 +9,20 @@
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/ofwhite">
 
         <Button
             android:id="@+id/cashdanationbtn"
             android:layout_width="251dp"
-            android:layout_height="67dp"
+            android:layout_height="0dp"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="504dp"
             android:backgroundTint="@color/babypink"
             android:text="cash - نقدي"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/backbtnn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,24 +33,39 @@
             android:layout_marginBottom="76dp"
             android:backgroundTint="@color/babypink"
             android:text="bit-העברה"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/visadonation"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cashdanationbtn"
-            app:layout_constraintVertical_bias="0.88" />
+            app:layout_constraintVertical_bias="0.56" />
 
         <Button
             android:id="@+id/visadonation"
             android:layout_width="242dp"
             android:layout_height="69dp"
-            android:layout_marginBottom="152dp"
+            android:layout_marginBottom="244dp"
             android:backgroundTint="@color/babypink"
             android:text="visa"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintHorizontal_bias="0.532"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/backbtnn"
+            android:layout_width="166dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginBottom="58dp"
+            android:backgroundTint="@color/babypink"
+            android:text="back"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cashdanationbtn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

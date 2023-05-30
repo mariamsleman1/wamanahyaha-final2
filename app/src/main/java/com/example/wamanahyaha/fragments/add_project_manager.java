@@ -40,10 +40,10 @@ public class add_project_manager extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private ImageView imageofprojuct;
+
     private EditText nameofproject;
     private EditText detailsofproject;
-    private EditText dateofproject;
+
     private Button addprojectbtn;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -51,10 +51,10 @@ public class add_project_manager extends Fragment {
 
     public void addproject(){
 
-        imageofprojuct=getView().findViewById(R.id.imgofproject);
+
         nameofproject=getView().findViewById(R.id.nameofproject);
         detailsofproject=getView().findViewById(R.id.detailsofproject);
-        dateofproject=getView().findViewById(R.id.dateofprojects);
+
 
         addprojectbtn=getView().findViewById(R.id.adprojbtn);
 
@@ -67,12 +67,12 @@ public class add_project_manager extends Fragment {
                 String etnameofproject,etdetailsofproject,etdateofproject;
                 etnameofproject=nameofproject.getText().toString();
                 etdetailsofproject=detailsofproject.getText().toString();
-                etdateofproject=dateofproject.getText().toString();
-                if(etnameofproject.trim().isEmpty()&&etdetailsofproject.trim().isEmpty()&&etdateofproject.trim().isEmpty()) {
+
+                if(etnameofproject.trim().isEmpty()&&etdetailsofproject.trim().isEmpty()) {
                     Toast.makeText(getContext(), "empty! try again!", Toast.LENGTH_SHORT).show();
                     return;}
                 else {
-                    addprojectmanager project = new addprojectmanager(etnameofproject, etdetailsofproject, etdateofproject);
+                    addprojectmanager project = new addprojectmanager(etnameofproject, etdetailsofproject);
                     adddatetofirstore(project);
                 } }
         });

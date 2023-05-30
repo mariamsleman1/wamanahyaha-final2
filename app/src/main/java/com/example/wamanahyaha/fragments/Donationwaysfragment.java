@@ -35,7 +35,16 @@ public class Donationwaysfragment extends Fragment {
         cashbtn=getView().findViewById(R.id.cashdanationbtn);
         bitbtn=getView().findViewById(R.id.bitdonation);
         visabtn=getView().findViewById(R.id.visadonation);
+        previous=getView().findViewById(R.id.backbtnn);
 
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecylerViewFragment RecylerViewFragment=new RecylerViewFragment();
+                FragmentManager manager=getFragmentManager();
+                manager.beginTransaction().replace(R.id.FRAME, RecylerViewFragment,RecylerViewFragment.getTag()).commit();
+            }
+        });
 
 
         cashbtn.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +52,7 @@ public class Donationwaysfragment extends Fragment {
             public void onClick(View v) {
                 cashdonatefragment cashdonatefragment=new cashdonatefragment();
                 FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.frameLayout, cashdonatefragment,cashdonatefragment.getTag()).commit();
+                manager.beginTransaction().replace(R.id.FRAME, cashdonatefragment,cashdonatefragment.getTag()).commit();
             }
         });
 
@@ -53,7 +62,7 @@ public class Donationwaysfragment extends Fragment {
 
                Bitfragment Bitfragment=new Bitfragment();
                 FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.frameLayout, Bitfragment,Bitfragment.getTag()).commit();
+                manager.beginTransaction().replace(R.id.FRAME, Bitfragment,Bitfragment.getTag()).commit();
             }
         });
         visabtn.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +70,7 @@ public class Donationwaysfragment extends Fragment {
             public void onClick(View v) {
                 VISAdonationfragment VISAdonationfragment=new VISAdonationfragment();
                 FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.frameLayout, VISAdonationfragment,VISAdonationfragment.getTag()).commit();
+                manager.beginTransaction().replace(R.id.FRAME, VISAdonationfragment,VISAdonationfragment.getTag()).commit();
             }
         });
     }

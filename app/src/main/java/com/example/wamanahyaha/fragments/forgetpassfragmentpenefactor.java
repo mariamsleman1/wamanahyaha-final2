@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -36,15 +37,24 @@ public class forgetpassfragmentpenefactor extends Fragment {
     private EditText etemail;
     private ImageButton email;
     private FirebaseAuth mAuth;
+    private Button previous;
 
     private void instalize() {
 
         etemail = getView().findViewById(R.id.emailforgottext);
         email = getView().findViewById(R.id.sendemailbtn);
-
+        previous=getView().findViewById(R.id.backbtnf);
         mAuth = FirebaseAuth.getInstance();
 
         // if the user have acount //if he has no acount send toast and go to sign up
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginbenefactorfragment loginbenefactorfragment = new loginbenefactorfragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.frameLayout, loginbenefactorfragment, loginbenefactorfragment.getTag()).commit();
+            }
+        });
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

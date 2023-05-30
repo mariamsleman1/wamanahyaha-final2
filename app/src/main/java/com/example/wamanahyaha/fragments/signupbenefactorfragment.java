@@ -1,5 +1,6 @@
 package com.example.wamanahyaha.fragments;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.wamanahyaha.R;
+import com.example.wamanahyaha.classes.PersonalpageActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -61,9 +63,9 @@ public class signupbenefactorfragment extends Fragment {
                                         if(mAuth.getCurrentUser()!=null){
                                             mAuth.signOut();
 
-                                            privatedetailsfragment privatedetailsfragment=new privatedetailsfragment();
-                                            FragmentManager manager=getFragmentManager();
-                                            manager.beginTransaction().replace(R.id.frameLayout,privatedetailsfragment,privatedetailsfragment.getTag()).commit();
+                                            Intent i = new Intent(getActivity(), PersonalpageActivity.class);
+                                            startActivity(i);
+                                            ((Activity) getActivity()).overridePendingTransition(0, 0);
 
 
                                         }

@@ -27,6 +27,8 @@ public class cashdonatefragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+private Button previous;
+
 
 
 
@@ -69,5 +71,17 @@ public class cashdonatefragment extends Fragment {
         return inflater.inflate(R.layout.fragment_cashdonatefragment, container, false);
     }
 
-
+    @Override
+    public void onStart() {
+        super.onStart();
+        previous=getView().findViewById(R.id.bakbtn);
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Donationwaysfragment Donationwaysfragment = new Donationwaysfragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.FRAME, Donationwaysfragment, Donationwaysfragment.getTag()).commit();
+            }
+        });
+    }
 }

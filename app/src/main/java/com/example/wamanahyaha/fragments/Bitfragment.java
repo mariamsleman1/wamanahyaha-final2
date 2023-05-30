@@ -70,4 +70,18 @@ public class Bitfragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bitfragment, container, false);
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        previous=getView().findViewById(R.id.backkbtn);
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Donationwaysfragment Donationwaysfragment = new Donationwaysfragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.FRAME, Donationwaysfragment, Donationwaysfragment.getTag()).commit();
+            }
+        });
+    }
 }

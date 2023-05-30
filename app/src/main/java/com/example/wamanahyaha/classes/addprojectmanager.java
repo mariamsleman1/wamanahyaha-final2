@@ -6,7 +6,7 @@ public class addprojectmanager {
 
     private String projectname;
     private String projectdeatails;
-    private String dateofproject;
+
 
 
 
@@ -27,18 +27,14 @@ public class addprojectmanager {
         this.projectdeatails = projectdeatails;
     }
 
-    public String getDateofproject() {
-        return dateofproject;
-    }
 
-    public void setDateofproject(String dateofproject) {
-        this.dateofproject = dateofproject;
-    }
 
-    public addprojectmanager(String projectname, String projectdeatails, String dateofproject) {
+
+
+    public addprojectmanager(String projectname, String projectdeatails) {
         this.projectname = projectname;
         this.projectdeatails = projectdeatails;
-        this.dateofproject = dateofproject;
+
     }
 
 }

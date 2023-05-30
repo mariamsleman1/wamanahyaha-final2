@@ -32,18 +32,27 @@ public class VISAdonationfragment extends Fragment {
     private EditText visatallnum;
     private EditText username;
     private EditText howmuch;
-    private Button dodo;
+    private Button donate;
     private Button previous;
 
     public void func(){
 
-
-        dodo=getView().findViewById(R.id.dopaypal);
+       previous=getView().findViewById(R.id.Backbtnn);
+        donate=getView().findViewById(R.id.dopaypal);
         howmuch=getView().findViewById(R.id.mablag);
         username=getView().findViewById(R.id.usernamepaypal);
 
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Donationwaysfragment Donationwaysfragment = new Donationwaysfragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.FRAME, Donationwaysfragment, Donationwaysfragment.getTag()).commit();
+            }
+        });
 
-        dodo.setOnClickListener(new View.OnClickListener() {
+
+        donate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String etusername,etmablag;

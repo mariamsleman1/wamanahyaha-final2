@@ -1,5 +1,7 @@
 package com.example.wamanahyaha.fragments;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.wamanahyaha.R;
 import com.example.wamanahyaha.classes.MyAdapter;
+import com.example.wamanahyaha.classes.PersonalpageActivity;
 import com.example.wamanahyaha.classes.callBack;
 import com.example.wamanahyaha.classes.projectdatA;
 import com.google.firebase.database.DatabaseReference;
@@ -43,7 +46,7 @@ public class RecylerViewFragment extends Fragment {
     private   MyAdapter myAdapter;
    private ArrayList<projectdatA> list=new ArrayList<>();
    private FirebaseFirestore DB=FirebaseFirestore.getInstance();
-   private Button donate ;
+   private Button Donate ;
 private callBack  Callback;
 private Button previous;
 
@@ -91,16 +94,35 @@ private Button previous;
     @Override
     public void onStart() {
         super.onStart();
+
         recyclerView = getView().findViewById(R.id.recyclerView);
-        donate = getView().findViewById(R.id.donate);
-        donate.setOnClickListener(new View.OnClickListener() {
+
+
+        Donate = getView().findViewById(R.id.donate);
+        Donate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Donationwaysfragment Donationwaysfragment = new Donationwaysfragment();
                 FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.frameLayout, Donationwaysfragment, Donationwaysfragment.getTag()).commit();
+                if (manager != null) {
+                    manager.beginTransaction().replace(R.id.FRAME, Donationwaysfragment, Donationwaysfragment.getTag()).commit();
+                }
             }
         });
+
+
+        /*previous=getView().findViewById(R.id.backbtn);
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), PersonalpageActivity.class);
+                startActivity(i);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
+            }
+        });
+*/
+
+
         // Callback = list->connect();
         DB.collection("projects")
                 .get()
