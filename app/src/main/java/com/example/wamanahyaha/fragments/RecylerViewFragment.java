@@ -1,6 +1,4 @@
 package com.example.wamanahyaha.fragments;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,11 +11,11 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.example.wamanahyaha.R;
 import com.example.wamanahyaha.classes.MyAdapter;
-import com.example.wamanahyaha.classes.PersonalpageActivity;
 import com.example.wamanahyaha.classes.callBack;
-import com.example.wamanahyaha.classes.projectdatA;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
@@ -43,6 +41,8 @@ public class RecylerViewFragment extends Fragment {
    private ArrayList<projectdatA> list=new ArrayList<>();
 
    private FirebaseFirestore DB=FirebaseFirestore.getInstance();
+   //private CollectionReference projectsref = DB.collection("projects");
+   // Query query = projectsref;
    private Button Donate ;
    private callBack  Callback;
    private Button previous;
@@ -139,6 +139,7 @@ public class RecylerViewFragment extends Fragment {
                 }).addOnFailureListener(e -> {
                     Toast.makeText(getContext(), "no data || something wrong ", Toast.LENGTH_SHORT).show();
                 });
+
 
     }
 

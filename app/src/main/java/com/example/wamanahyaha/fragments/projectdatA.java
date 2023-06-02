@@ -1,10 +1,16 @@
-package com.example.wamanahyaha.classes;
+package com.example.wamanahyaha.fragments;
 
 public class projectdatA {
    private String projectname;
     private String 	projectdeatails;
 
+    public projectdatA() {
+    }
 
+    public projectdatA(String projectname, String projectdeatails) {
+        this.projectname = projectname;
+        this.projectdeatails = projectdeatails;
+    }
 
     public String getNameproject() {
 

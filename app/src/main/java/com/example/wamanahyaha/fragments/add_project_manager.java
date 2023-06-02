@@ -72,13 +72,13 @@ public class add_project_manager extends Fragment {
                     Toast.makeText(getContext(), "empty! try again!", Toast.LENGTH_SHORT).show();
                     return;}
                 else {
-                    addprojectmanager project = new addprojectmanager(etnameofproject, etdetailsofproject);
-                    adddatetofirstore(project);
+                    projectdatA project = new projectdatA(etnameofproject, etdetailsofproject);
+                    addProjectData(project);
                 } }
         });
 
     }
-    private void adddatetofirstore(addprojectmanager project) {
+    private void addProjectData(projectdatA project) {
 
 try{
 
