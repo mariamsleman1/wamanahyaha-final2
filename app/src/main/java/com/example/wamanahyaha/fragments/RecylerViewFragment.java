@@ -1,20 +1,16 @@
 package com.example.wamanahyaha.fragments;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.example.wamanahyaha.R;
 import com.example.wamanahyaha.classes.MyAdapter;
 import com.example.wamanahyaha.classes.PersonalpageActivity;
@@ -45,10 +41,13 @@ public class RecylerViewFragment extends Fragment {
    private DatabaseReference databaseReference;
     private   MyAdapter myAdapter;
    private ArrayList<projectdatA> list=new ArrayList<>();
+
    private FirebaseFirestore DB=FirebaseFirestore.getInstance();
    private Button Donate ;
-private callBack  Callback;
-private Button previous;
+   private callBack  Callback;
+   private Button previous;
+
+
 
     public RecylerViewFragment() {
         // Required empty public constructor
@@ -125,15 +124,18 @@ private Button previous;
 
         // Callback = list->connect();
         DB.collection("projects")
-                .get()
-                .addOnCompleteListener(task -> {
+                .get().addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         for (QueryDocumentSnapshot document : task.getResult()) {
+
                             list.add(document.toObject(projectdatA.class));
                         }
+
                     }
-                    //Callback.onCallBack(list);
                     connect();
+
+                    //Callback.onCallBack(list);
+
                 }).addOnFailureListener(e -> {
                     Toast.makeText(getContext(), "no data || something wrong ", Toast.LENGTH_SHORT).show();
                 });

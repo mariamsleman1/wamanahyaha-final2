@@ -1,23 +1,28 @@
 package com.example.wamanahyaha.classes;
 
 public class projectdatA {
-   private String nameproject;
-   private String detailsproject;
+   private String projectname;
+    private String 	projectdeatails;
+
+
 
     public String getNameproject() {
-        return nameproject;
+
+        return projectname;
     }
 
     public void setNameproject(String nameproject) {
-        this.nameproject = nameproject;
+
+        this.projectname = nameproject;
     }
 
     public String getDetailsproject() {
-        return detailsproject;
+
+        return 	projectdeatails;
     }
 
     public void setDetailsproject(String detailsproject) {
-        this.detailsproject = detailsproject;
+        this.projectdeatails = detailsproject;
     }
 
 
